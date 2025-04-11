@@ -1,0 +1,48 @@
+{
+  "name": "jotai-mcp-server",
+  "description": "Jotai MCP server",
+  "version": "0.0.0",
+  "type": "module",
+  "author": "Daishi Kato",
+  "packageManager": "pnpm@9.4.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jotaijs/jotai-mcp-server.git"
+  },
+  "bin": {
+    "jotai-mcp-server": "./dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "compile": "rm -rf dist && tsc -p .",
+    "test": "pnpm run '/^test:.*/'",
+    "test:format": "prettier -c .",
+    "test:lint": "eslint .",
+    "test:types": "tsc -p . --noEmit"
+  },
+  "keywords": [
+    "jotai",
+    "mcp",
+    "server"
+  ],
+  "license": "MIT",
+  "prettier": {
+    "singleQuote": true
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.9.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.24.0",
+    "@types/node": "^22.14.0",
+    "eslint": "^9.24.0",
+    "eslint-import-resolver-typescript": "^4.3.2",
+    "eslint-plugin-import": "^2.31.0",
+    "prettier": "^3.5.3",
+    "ts-expect": "^1.3.0",
+    "typescript": "^5.8.3",
+    "typescript-eslint": "^8.29.1"
+  }
+}
