@@ -1,9 +1,5 @@
 #!/usr/bin/env node
 
-/*
-import { join } from 'node:path';
-import { readFile } from 'node:fs/promises';
-*/
 import { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js';
 import { StdioServerTransport } from '@modelcontextprotocol/sdk/server/stdio.js';
 
@@ -17,12 +13,6 @@ server.resource('readme', 'docs://readme', async (uri) => {
     'https://raw.githubusercontent.com/pmndrs/jotai/main/README.md',
   );
   const text = await res.text();
-  /*
-  const text = await readFile(
-    join(import.meta.dirname, '..', 'contents', 'README.md'),
-    'utf8',
-  );
-  */
   return { contents: [{ uri: uri.href, text }] };
 });
 
@@ -31,12 +21,6 @@ server.resource('tips', 'docs://tips', async (uri) => {
     'https://gist.githubusercontent.com/dai-shi/647037e8a1811a3b09febec42e7d1f4a/raw/a738de86596351d910b51d9adb9e9c43f1c2eee9/jotai-tips.md',
   );
   const text = await res.text();
-  /*
-  const text = await readFile(
-    join(import.meta.dirname, '..', 'contents', 'jotai-tips.md'),
-    'utf8',
-  );
-  */
   return { contents: [{ uri: uri.href, text }] };
 });
 
