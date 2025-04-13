@@ -1,19 +1,17 @@
 # Jotai MCP Server
 
-## Installation
+## Requirements
 
-```bash
-$ npm install -g jotai-mcp-server
-```
+- [Deno](https://deno.com/) must be installed.
 
 ## Config
 
 ```json
 {
   "mcpServers": {
-    "jotai": {
-      "command": "jotai-mcp-server",
-      "args": [],
+    "jotai-mcp-server": {
+      "command": "deno",
+      "args": ["run", "--allow-env", "--allow-net", "npm:jotai-mcp-server"],
       "env": {
         "GITHUB_PERSONAL_ACCESS_TOKEN": "your_github_token"
       }

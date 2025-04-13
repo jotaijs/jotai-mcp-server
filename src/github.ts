@@ -1,3 +1,5 @@
+import process from 'node:process';
+
 export async function isSponsoring(targetUsername: string): Promise<boolean> {
   const token = process.env.GITHUB_PERSONAL_ACCESS_TOKEN;
   if (!token) {
