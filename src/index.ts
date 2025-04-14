@@ -21,7 +21,7 @@ if (await isSponsoring('dai-shi')) {
   server.resource('tips', 'docs://tips', async (uri) => {
     // TODO: proper access control
     const res = await fetch(
-      'https://gist.githubusercontent.com/dai-shi/1f2b35d123b54b15a7d208a0cfbc383b/raw/f1fc4bd7016547e2134517850086d50b9967e3cf/jotai-tips.md',
+      'https://gist.githubusercontent.com/dai-shi/1f2b35d123b54b15a7d208a0cfbc383b/raw/b3c7dd73b6384b605bcbbab86d6eb33b0ad5b408/jotai-tips.md',
     );
     const text = await res.text();
     return { contents: [{ uri: uri.href, text }] };
